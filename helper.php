@@ -13,16 +13,16 @@ use Joomla\String\StringHelper;
  */
 class ModBrochureHelper
 {
-	/**
-	 * Converts CSV to an array
-	 *
-	 * @param  string             $csv          CSV to convert
-	 * @param  bool               $header_keys  Does the CSV contain a header row?
+    /**
+     * Converts CSV to an array
+     *
+     * @param  string             $csv          CSV to convert
+     * @param  bool               $header_keys  Does the CSV contain a header row?
      * @param  mixed (int|false)  $cols         The number of columns each row is expected to have
-	 *
-	 * @return  mixed
-	 */
-	public static function csvArray($csv, $header_keys = false, $cols = false)
+     *
+     * @return  mixed
+     */
+    public static function csvArray($csv, $header_keys = false, $cols = false)
     {
         if (!is_string($csv)) {
             trigger_error('Function \'csvarray\' expects argument 1 to be an string', E_USER_ERROR);

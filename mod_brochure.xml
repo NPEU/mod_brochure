@@ -1,1 +1,198 @@
-<?xml version="1.0" encoding="utf-8"?><extension type="module" client="site" version="3.2.0">	<name>MOD_BROCHURE</name>	<author>Andy Kirk</author>    <authorEmail>andy.kirk@npeu.ox.ac.uk</authorEmail>	<authorUrl>https://www.npeu.ox.ac.uk</authorUrl>	<creationDate>September 2018</creationDate>	<copyright>(C) NPEU 2018</copyright>    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>    	<!--  The version string is recorded in the components table -->	<version>0.0.1</version>	<!-- The description is optional and defaults to the name -->	<description>MOD_BROCHURE_XML_DESCRIPTION</description>        <updateservers>		<!-- Note: No spaces or linebreaks allowed between the server tags -->		<server type="extension" name="mod_brochure Update Site">https://raw.githubusercontent.com/NPEU/mod_brochure/master/manifest.xml</server>	</updateservers>	<files>		<filename module="mod_brochure">mod_brochure.php</filename>		<filename>index.html</filename>		<folder>language</folder>		<folder>tmpl</folder>	</files>        <config>		<fields name="params">			<fieldset name="basic">				<field					name="leftpane"					type="radio"					label="MOD_BROCHURE_LEFT_PANE_LABEL"					description="MOD_BROCHURE_LEFT_PANE_DESC"					default=""                    class="btn-group"					required="true"				>                    <option value="text">MOD_BROCHURE_PANE_TEXT_RADIO_LABEL</option>					<option value="image">MOD_BROCHURE_PANE_IMAGE_RADIO_LABEL</option>					<option value="video">MOD_BROCHURE_PANE_VIDEO_RADIO_LABEL</option>					<option value="map">MOD_BROCHURE_PANE_MAP_RADIO_LABEL</option>					<option value="data">MOD_BROCHURE_PANE_DATA_RADIO_LABEL</option>                </field>                <field					name="rightpane"					type="radio"					label="MOD_BROCHURE_RIGHT_PANE_LABEL"					description="MOD_BROCHURE_RIGHT_PANE_DESC"					default=""                    class="btn-group"					required="true"				>                    <option value="text">MOD_BROCHURE_PANE_TEXT_RADIO_LABEL</option>					<option value="image">MOD_BROCHURE_PANE_IMAGE_RADIO_LABEL</option>					<option value="video">MOD_BROCHURE_PANE_VIDEO_RADIO_LABEL</option>					<option value="map">MOD_BROCHURE_PANE_MAP_RADIO_LABEL</option>					<option value="data">MOD_BROCHURE_PANE_DATA_RADIO_LABEL</option>                </field>			</fieldset>            <fieldset name="advanced">				<field					name="layout"					type="modulelayout"					label="JFIELD_ALT_LAYOUT_LABEL"					description="JFIELD_ALT_MODULE_LAYOUT_DESC"				/>				<field					name="moduleclass_sfx"					type="textarea"					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"					rows="3"				/>			</fieldset>            <fieldset name="text_pane">				<field					name="text_content"					type="editor"					label="MOD_BROCHURE_TEXT_PANE_EDITOR_LABEL"					description="MOD_BROCHURE_TEXT_PANE_EDITOR_DESC"					default=""                    buttons="false"                    filter="JComponentHelper::filterText"				/>                <field					name="text_cta_text"					type="text"					label="MOD_BROCHURE_TEXT_PANE_CTA_TEXT_LABEL"					description="MOD_BROCHURE_TEXT_PANE_CTA_TEXT_DESC"					default=""				/>                <field					name="text_cta_link"					type="text"					label="MOD_BROCHURE_TEXT_PANE_CTA_LINK_LABEL"					description="MOD_BROCHURE_TEXT_PANE_CTA_LINK_DESC"					default=""				/>			</fieldset>            <fieldset name="image_pane">				<field					name="image_src"					type="media"					label="MOD_BROCHURE_IMAGE_PANE_IMAGE_LABEL"					description="MOD_BROCHURE_IMAGE_PANE_IMAGE_DESC"					default=""                    buttons="false"				/>                <field					name="image_alt"					type="textarea"					label="MOD_BROCHURE_IMAGE_PANE_DESC_LABEL"					description="MOD_BROCHURE_IMAGE_PANE_DESC_DESC"					default=""				/>			</fieldset>            <fieldset name="video_pane">				<field					name="youtube_id"					type="text"					label="MOD_BROCHURE_VIDEO_PANE_YOUTUBE_ID_LABEL"					description="MOD_BROCHURE_VIDEO_PANE_YOUTUBE_ID_DESC"					default=""				/>			</fieldset>            <fieldset name="map_pane">				<field                    name="lat"                    type="text"                    label="MOD_BROCHURE_MAP_PANE_LAT_LABEL"                    description="MOD_BROCHURE_MAP_PANE_LAT_DESC"                    size="40"                    default=""                    filter="float"                />                <field                    name="lng"                    type="text"                    label="MOD_BROCHURE_MAP_PANE_LNG_LABEL"                    description="MOD_BROCHURE_MAP_PANE_LNG_DESC"                    size="40"                    default=""                    filter="float"                />                <field                    name="zoom"                    type="text"                    label="MOD_BROCHURE_MAP_PANE_ZOOM_LABEL"                    description="MOD_BROCHURE_MAP_PANE_ZOOM_DESC"                    size="40"                    default=""                    filter="int"                />                <field                    name="access_token"                    type="text"                    label="MOD_BROCHURE_MAP_PANE_ACCESS_TOKEN_LABEL"                    description="MOD_BROCHURE_MAP_PANE_ACCESS_TOKEN_DESC"                    default=""                />                <field                    name="manual_markers"                    type="textarea"                    label="MOD_BROCHURE_MAP_PANE_MANUAL_MARKERS_LABEL"                    description="MOD_BROCHURE_MAP_PANE_MANUAL_MARKERS_DESC"                    default=""                    rows="10"                    filter="raw"                />			</fieldset>            <fieldset name="data_pane">				<field                    name="data_src"                    type="text"                    label="MOD_BROCHURE_DATA_PANE_SRC_LABEL"                    description="MOD_BROCHURE_DATA_PANE_SRC_DESC"                    size="40"                    default=""                />                <field                    name="data_tpl"                    type="textarea"                    label="MOD_BROCHURE_DATA_PANE_TPL_LABEL"                    description="MOD_BROCHURE_DATA_PANE_TPL_DESC"                    default=""                    rows="10"                    filter="raw"                />			</fieldset>		</fields>	</config>    </extension>
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" client="site" version="3.2.0">
+
+    <name>MOD_BROCHURE</name>
+    <author>Andy Kirk</author>
+    <authorEmail>andy.kirk@npeu.ox.ac.uk</authorEmail>
+    <authorUrl>https://www.npeu.ox.ac.uk</authorUrl>
+    <creationDate>September 2018</creationDate>
+    <copyright>(C) NPEU 2018</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    
+    <!--  The version string is recorded in the components table -->
+    <version>1.1.0</version>
+    <!-- The description is optional and defaults to the name -->
+    <description>MOD_BROCHURE_XML_DESCRIPTION</description>
+    
+    <updateservers>
+        <!-- Note: No spaces or linebreaks allowed between the server tags -->
+        <server type="extension" name="mod_brochure Update Site">https://raw.githubusercontent.com/NPEU/mod_brochure/master/manifest.xml</server>
+    </updateservers>
+
+
+    <files>
+        <filename module="mod_brochure">mod_brochure.php</filename>
+        <filename>index.html</filename>
+        <folder>language</folder>
+        <folder>tmpl</folder>
+    </files>
+
+    
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field
+                    name="leftpane"
+                    type="radio"
+                    label="MOD_BROCHURE_LEFT_PANE_LABEL"
+                    description="MOD_BROCHURE_LEFT_PANE_DESC"
+                    default=""
+                    class="btn-group"
+                    required="true"
+                >
+                    <option value="text">MOD_BROCHURE_PANE_TEXT_RADIO_LABEL</option>
+                    <option value="image">MOD_BROCHURE_PANE_IMAGE_RADIO_LABEL</option>
+                    <option value="video">MOD_BROCHURE_PANE_VIDEO_RADIO_LABEL</option>
+                    <option value="map">MOD_BROCHURE_PANE_MAP_RADIO_LABEL</option>
+                    <option value="data">MOD_BROCHURE_PANE_DATA_RADIO_LABEL</option>
+                </field>
+                <field
+                    name="rightpane"
+                    type="radio"
+                    label="MOD_BROCHURE_RIGHT_PANE_LABEL"
+                    description="MOD_BROCHURE_RIGHT_PANE_DESC"
+                    default=""
+                    class="btn-group"
+                    required="true"
+                >
+                    <option value="text">MOD_BROCHURE_PANE_TEXT_RADIO_LABEL</option>
+                    <option value="image">MOD_BROCHURE_PANE_IMAGE_RADIO_LABEL</option>
+                    <option value="video">MOD_BROCHURE_PANE_VIDEO_RADIO_LABEL</option>
+                    <option value="map">MOD_BROCHURE_PANE_MAP_RADIO_LABEL</option>
+                    <option value="data">MOD_BROCHURE_PANE_DATA_RADIO_LABEL</option>
+                </field>
+            </fieldset>
+            <fieldset name="advanced">
+                <field
+                    name="layout"
+                    type="modulelayout"
+                    label="JFIELD_ALT_LAYOUT_LABEL"
+                    description="JFIELD_ALT_MODULE_LAYOUT_DESC"
+                />
+                <field
+                    name="moduleclass_sfx"
+                    type="textarea"
+                    label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                    description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"
+                    rows="3"
+                />
+            </fieldset>
+            <fieldset name="text_pane">
+                <field
+                    name="text_content"
+                    type="editor"
+                    label="MOD_BROCHURE_TEXT_PANE_EDITOR_LABEL"
+                    description="MOD_BROCHURE_TEXT_PANE_EDITOR_DESC"
+                    default=""
+                    buttons="false"
+                    filter="JComponentHelper::filterText"
+                />
+                <field
+                    name="text_cta_text"
+                    type="text"
+                    label="MOD_BROCHURE_TEXT_PANE_CTA_TEXT_LABEL"
+                    description="MOD_BROCHURE_TEXT_PANE_CTA_TEXT_DESC"
+                    default=""
+                />
+                <field
+                    name="text_cta_link"
+                    type="text"
+                    label="MOD_BROCHURE_TEXT_PANE_CTA_LINK_LABEL"
+                    description="MOD_BROCHURE_TEXT_PANE_CTA_LINK_DESC"
+                    default=""
+                />
+            </fieldset>
+            <fieldset name="image_pane">
+                <field
+                    name="image_src"
+                    type="media"
+                    label="MOD_BROCHURE_IMAGE_PANE_IMAGE_LABEL"
+                    description="MOD_BROCHURE_IMAGE_PANE_IMAGE_DESC"
+                    default=""
+                    buttons="false"
+                />
+                <field
+                    name="image_alt"
+                    type="textarea"
+                    label="MOD_BROCHURE_IMAGE_PANE_DESC_LABEL"
+                    description="MOD_BROCHURE_IMAGE_PANE_DESC_DESC"
+                    default=""
+                />
+            </fieldset>
+            <fieldset name="video_pane">
+                <field
+                    name="youtube_id"
+                    type="text"
+                    label="MOD_BROCHURE_VIDEO_PANE_YOUTUBE_ID_LABEL"
+                    description="MOD_BROCHURE_VIDEO_PANE_YOUTUBE_ID_DESC"
+                    default=""
+                />
+            </fieldset>
+            <fieldset name="map_pane">
+                <field
+                    name="lat"
+                    type="text"
+                    label="MOD_BROCHURE_MAP_PANE_LAT_LABEL"
+                    description="MOD_BROCHURE_MAP_PANE_LAT_DESC"
+                    size="40"
+                    default=""
+                    filter="float"
+                />
+                <field
+                    name="lng"
+                    type="text"
+                    label="MOD_BROCHURE_MAP_PANE_LNG_LABEL"
+                    description="MOD_BROCHURE_MAP_PANE_LNG_DESC"
+                    size="40"
+                    default=""
+                    filter="float"
+                />
+                <field
+                    name="zoom"
+                    type="text"
+                    label="MOD_BROCHURE_MAP_PANE_ZOOM_LABEL"
+                    description="MOD_BROCHURE_MAP_PANE_ZOOM_DESC"
+                    size="40"
+                    default=""
+                    filter="int"
+                />
+                <field
+                    name="access_token"
+                    type="text"
+                    label="MOD_BROCHURE_MAP_PANE_ACCESS_TOKEN_LABEL"
+                    description="MOD_BROCHURE_MAP_PANE_ACCESS_TOKEN_DESC"
+                    default=""
+                />
+                <field
+                    name="manual_markers"
+                    type="textarea"
+                    label="MOD_BROCHURE_MAP_PANE_MANUAL_MARKERS_LABEL"
+                    description="MOD_BROCHURE_MAP_PANE_MANUAL_MARKERS_DESC"
+                    default=""
+                    rows="10"
+                    filter="raw"
+                />
+            </fieldset>
+            <fieldset name="data_pane">
+                <field
+                    name="data_src"
+                    type="text"
+                    label="MOD_BROCHURE_DATA_PANE_SRC_LABEL"
+                    description="MOD_BROCHURE_DATA_PANE_SRC_DESC"
+                    size="40"
+                    default=""
+                />
+                <field
+                    name="data_tpl"
+                    type="textarea"
+                    label="MOD_BROCHURE_DATA_PANE_TPL_LABEL"
+                    description="MOD_BROCHURE_DATA_PANE_TPL_DESC"
+                    default=""
+                    rows="10"
+                    filter="raw"
+                />
+            </fieldset>
+        </fields>
+    </config>
+    
+</extension>
