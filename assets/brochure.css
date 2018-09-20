@@ -1,0 +1,135 @@
+.brochure .brochure__panes--multiple {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-left: -1em;
+    margin-right: -1em;
+}
+
+    .brochure .brochure__panes--multiple .brochure__panes--left,
+    .brochure .brochure__panes--multiple .brochure__panes--right {
+        -webkit-flex: 1 0 200px;
+        -ms-flex: 1 0 200px;
+        flex: 1 0 200px;
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+
+
+/*
+    This is the layout in Grid, but I'm still not sure why I'd bother with it since the flexbox
+    above does exactly the same thing.
+    Good to use new stuff, but isn't this just bloat if it's the same?
+*/
+
+@supports (display: grid) {
+
+    .brochure .brochure__panes--multiple {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-column-gap: 2em;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .brochure .brochure__panes--multiple .brochure__panes--left,
+    .brochure .brochure__panes--multiple .brochure__panes--right {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+
+    .brochure .brochure__cta a {
+        border: 1px solid;
+        background-color: #fff;
+        padding: 0.5em 1em;
+        display: inline-block;
+        border-radius: 0.3em;
+    }
+
+    .brochure .brochure__cta a[href]:focus {
+        box-shadow: 0 0 0 0.15em rgba(0,0,0,0.3);
+        outline: 0 none;
+        text-decoration: none;
+    }
+
+    .brochure .brochure__cta a[href]:hover,
+    .brochure .brochure__cta a[href]:active {
+        background-color: rgba(0,0,0,0.1);
+        text-decoration: none;
+    }
+
+        .brochure .brochure__cta svg {
+            vertical-align: text-top;
+        }
+
+
+    /* IMAGE */
+
+    .brochure .brochure__content--image {
+        width: 100%;
+        height: 100%;
+    }
+
+        @supports (object-fit: cover) {
+            .brochure__panes .brochure__content--image img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        
+    /* MAP */
+
+    .brochure .brochure__content--map {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        width: 100%;
+        height: 100%
+    }
+
+        .brochure .brochure__content--map > * {
+            width: 100%;
+            height: 100%;
+            min-height: 300px;
+        }
+        
+    
+    /* VIDEO */
+    
+    .brochure .brochure__content--video {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-align-items: center;
+             -ms-flex-align: center;
+                align-items: center;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        color: #fff;
+    }
+        /* From: http://embedresponsively.com */
+        .brochure .brochure__content--video > div {
+            position: relative;
+            padding-bottom: 56.25%;
+            width: 100%;
+            height: 0;
+            overflow: hidden;
+            
+        }
+            .brochure .brochure__content--video > div > iframe, 
+            .brochure .brochure__content--video > div > object,
+            .brochure .brochure__content--video > div > embed {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
