@@ -23,8 +23,11 @@
     <files>
         <filename module="mod_brochure">mod_brochure.php</filename>
         <filename>index.html</filename>
+        <filename>helper.php</filename>
+        <folder>assets</folder>
         <folder>language</folder>
         <folder>tmpl</folder>
+        <folder>vendor</folder>
     </files>
 
 
