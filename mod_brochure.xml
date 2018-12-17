@@ -8,12 +8,12 @@
     <creationDate>September 2018</creationDate>
     <copyright>(C) NPEU 2018</copyright>
     <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
-    
+
     <!--  The version string is recorded in the components table -->
     <version>1.1.0</version>
     <!-- The description is optional and defaults to the name -->
     <description>MOD_BROCHURE_XML_DESCRIPTION</description>
-    
+
     <updateservers>
         <!-- Note: No spaces or linebreaks allowed between the server tags -->
         <server type="extension" name="mod_brochure Update Site">https://raw.githubusercontent.com/NPEU/mod_brochure/master/update-manifest.xml</server>
@@ -27,7 +27,7 @@
         <folder>tmpl</folder>
     </files>
 
-    
+
     <config>
         <fields name="params">
             <fieldset name="basic">
@@ -191,8 +191,26 @@
                     rows="10"
                     filter="raw"
                 />
+                <field
+                    name="data_src_err"
+                    type="editor"
+                    label="MOD_BROCHURE_DATA_PANE_SOURCE_ERROR_LABEL"
+                    description="MOD_BROCHURE_DATA_PANE_SOURCE_ERROR_DESC"
+                    default="&lt;p&gt;Data could not be fetched from the data source.&lt;/p&gt;"
+                    buttons="false"
+                    filter="JComponentHelper::filterText"
+                />
+                <field
+                    name="data_decode_err"
+                    type="editor"
+                    label="MOD_BROCHURE_DATA_PANE_DECODE_ERROR_LABEL"
+                    description="MOD_BROCHURE_DATA_PANE_DECODE_ERROR_DESC"
+                    default="&lt;p&gt;Data could not be decoded as JSON.&lt;/p&gt;"
+                    buttons="false"
+                    filter="JComponentHelper::filterText"
+                />
             </fieldset>
         </fields>
     </config>
-    
+
 </extension>
