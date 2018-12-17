@@ -3,12 +3,12 @@ function leafletMapInitialize(brochure_map_id, map_data, markers) {
     markers = markers ? markers : null;
     
     //console.log(map_data);
-	//console.log(markers);
+    //console.log(markers);
        
-	//var $mapEl        = $('#' + brochure_map_id);
+    //var $mapEl        = $('#' + brochure_map_id);
     //var $mapContainer = $mapEl.parent();
-	var $mapEl        = document.getElementById(brochure_map_id);
-	var $mapContainer = $mapEl.parentNode;
+    var $mapEl        = document.getElementById(brochure_map_id);
+    var $mapContainer = $mapEl.parentNode;
 
     var default_icon_colour = 'red';
     var icon_colours = {
@@ -21,11 +21,11 @@ function leafletMapInitialize(brochure_map_id, map_data, markers) {
         'pink':   'rgb(230,97,172)'
     };
 
-	$mapContainer.innerHTML = '';
+    $mapContainer.innerHTML = '';
 
     var map_div = document.createElement('div');
     map_div.id = brochure_map_id;
-	$mapContainer.appendChild(map_div);// ($('<div id="' + brochure_map_id + '" class="' + classes + '" />')); 
+    $mapContainer.appendChild(map_div);// ($('<div id="' + brochure_map_id + '" class="' + classes + '" />')); 
 
     var map = L.map(brochure_map_id, {
         center: [map_data.lat, map_data.lng],
@@ -82,7 +82,7 @@ function leafletMapInitialize(brochure_map_id, map_data, markers) {
                         data: map_data.popuptemplate
                     });
                     svg_marker.bindPopup(template.render(marker.popupdata));
-                }			    
+                }               
             }*/
 
             svg_marker.addTo(map);

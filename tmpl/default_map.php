@@ -28,7 +28,7 @@ $doc->addScript($module_path . '/assets/leaflet-fullscreen.js');
 
 $script = array(
     'ready(function(){',
-    '	extraMapInitialize(' . $extra['id'] . ', ' . json_encode($params) . ', ' . json_encode($item->markers). ');',
+    '   extraMapInitialize(' . $extra['id'] . ', ' . json_encode($params) . ', ' . json_encode($item->markers). ');',
     '});'
 );
 
@@ -58,10 +58,10 @@ if ($manual_markers) {
 }
 
 $map_data = new StdClass();
-$map_data->lat   = $lat;		
-$map_data->lng   = $lng;		
-$map_data->zoom  = $zoom;		
-$map_data->token = $token;		
+$map_data->lat   = $lat;        
+$map_data->lng   = $lng;        
+$map_data->zoom  = $zoom;       
+$map_data->token = $token;      
 
 $static_map_src = 'https://api.mapbox.com/styles/v1/mapbox/streets-v10/static/' . $lng  . ',' . $lat  . ',' . $zoom . ',0,0/600x600?access_token=' . $token;
 
