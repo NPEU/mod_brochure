@@ -7,7 +7,7 @@
     <authorUrl>https://www.npeu.ox.ac.uk</authorUrl>
     <creationDate>September 2018</creationDate>
     <copyright>(C) NPEU 2018</copyright>
-    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <license>MIT License; see LICENSE.md</license>
 
     <!--  The version string is recorded in the components table -->
     <version>1.1.0</version>
