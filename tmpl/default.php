@@ -18,14 +18,7 @@ $doc->addStyleSheet($css_file);
 
 
 ?>
-<div class="brochure<?php echo $moduleclass_sfx; ?>">
-    <?php if ($params->get('show_title')): ?>
-    <p><?php echo $params->get('title'); ?></p>
-    <?php endif; ?>
-    <pre>
-    <?php #var_dump($params); ?>
-    </pre>
-    
+<div class="brochure<?php echo $moduleclass_sfx; ?>">    
     <div class="brochure__panes<?php if ($single_pane_type !== false): ?>  brochure__panes--single<?php else: ?>  brochure__panes--multiple<?php endif; ?>">
         <?php if ($single_pane_type !== false): ?>
         <div class="brochure__panes--single">
