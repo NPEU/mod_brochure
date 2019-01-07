@@ -12,6 +12,9 @@
             <downloadurl type="full" format="zip">https://github.com/NPEU/mod_brochure/archive/v1.0.0.zip</downloadurl>
         </downloads>
         <targetplatform name="joomla" version="3.[6789]" />
+        <tags>
+            <tag>stable</tag>
+        </tags>
     </update>
     <update>
         <name>mod_brochure module</name>
@@ -25,6 +28,9 @@
             <downloadurl type="full" format="zip">https://github.com/NPEU/mod_brochure/archive/v1.1.0.zip</downloadurl>
         </downloads>
         <targetplatform name="joomla" version="3.[6789]" />
+        <tags>
+            <tag>stable</tag>
+        </tags>
     </update>
     <update>
         <name>mod_brochure module</name>
@@ -38,5 +44,8 @@
             <downloadurl type="full" format="zip">https://github.com/NPEU/mod_brochure/archive/v1.1.1.zip</downloadurl>
         </downloads>
         <targetplatform name="joomla" version="3.[6789]" />
+        <tags>
+            <tag>stable</tag>
+        </tags>
     </update>
 </updates>
