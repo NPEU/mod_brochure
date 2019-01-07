@@ -13,9 +13,10 @@ $doc = JFactory::getDocument();
 
 $module_path = str_replace($_SERVER['DOCUMENT_ROOT'], '', dirname(__DIR__));
 
-$css_file = $module_path . '/assets/brochure.css';
-$doc->addStyleSheet($css_file);
-
+if ($load_assets) {
+    $css_file = $module_path . '/assets/brochure.css';
+    $doc->addStyleSheet($css_file);
+}
 
 ?>
 <div class="brochure<?php echo $moduleclass_sfx; ?>">    

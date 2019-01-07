@@ -14,6 +14,7 @@ JLoader::register('ModBrochureHelper', __DIR__ . '/helper.php');
 
 $left_pane_type      = $params->get('leftpane');
 $right_pane_type     = $params->get('rightpane');
+$load_assets         = $params->get('load_assets');
 
 $single_pane_type    = ($left_pane_type == $right_pane_type) ? $left_pane_type : false;
 

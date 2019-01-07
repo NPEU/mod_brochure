@@ -16,7 +16,7 @@
 
     <updateservers>
         <!-- Note: No spaces or linebreaks allowed between the server tags -->
-        <server type="extension" name="NPEU: mod_brochure update site">https://raw.githubusercontent.com/NPEU/mod_brochure/master/update-manifest.xml</server>
+        <server type="extension" name="mod_brochure Update Site">https://raw.githubusercontent.com/NPEU/mod_brochure/master/update-manifest.xml</server>
     </updateservers>
 
 
@@ -66,6 +66,18 @@
                 </field>
             </fieldset>
             <fieldset name="advanced">
+                <field
+					name="load_assets"
+					type="radio"
+					label="MOD_BROCHURE_ADV_PANE_ASSETS_LABEL"
+					description="MOD_BROCHURE_ADV_PANE_ASSETS_DESC"
+					class="btn-group btn-group-yesno"
+					default="1"
+					filter="integer"
+					>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
                 <field
                     name="layout"
                     type="modulelayout"

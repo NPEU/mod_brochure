@@ -17,16 +17,16 @@ defined('_JEXEC') or die;
 # https://api.mapbox.com/styles/v1/mapbox/streets-v10/static/pin-s+f00(-1.21574715729,51.751613839),pin-s+00f(-1.23574715729,51.751613839)/-1.21574715729,51.751613839,13,0,0/600x600?access_token=pk.eyJ1IjoibnBldS13ZWJtYXN0ZXIiLCJhIjoiY2ppNGJ0ejd0MDZ5MDNwcGY1aHI4dzhxdiJ9.D9o7nUlRzTl266sY2hqwwA
 
 
-// Add Leaflet resources:
-$doc->addStyleSheet('https://unpkg.com/leaflet@1.3.1/dist/leaflet.css', null, array('integrity' => 'sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==', 'crossorigin' => '__EMPTY_STRING__'));
-$doc->addScript('https://unpkg.com/leaflet@1.3.1/dist/leaflet.js', null, array('integrity' => 'sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw==', 'crossorigin' => '__EMPTY_STRING__'));
+if ($load_assets) {
+    // Add Leaflet assets:
+    $doc->addStyleSheet('https://unpkg.com/leaflet@1.3.1/dist/leaflet.css', null, array('integrity' => 'sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==', 'crossorigin' => '__EMPTY_STRING__'));
+    $doc->addScript('https://unpkg.com/leaflet@1.3.1/dist/leaflet.js', null, array('integrity' => 'sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw==', 'crossorigin' => '__EMPTY_STRING__'));
 
-$doc->addStyleSheet($module_path . '/assets/leaflet-fullscreen.css');
+    $doc->addStyleSheet($module_path . '/assets/leaflet-fullscreen.css');
 
-$doc->addScript($module_path . '/assets/leaflet-svg-icon.js');
-$doc->addScript($module_path . '/assets/leaflet-map.js');
-$doc->addScript($module_path . '/assets/leaflet-fullscreen.js');
-
+    $doc->addScript($module_path . '/assets/leaflet-svg-icon.js');
+    $doc->addScript($module_path . '/assets/leaflet-map.js');
+}
 /*
 
 $script = array(
@@ -39,9 +39,9 @@ $doc->addScriptDeclaration(implode("\n", $script) . "\n");
 
 */
 
-$lat  = $params->get('lat');
-$lng  = $params->get('lng');
-$zoom = $params->get('zoom');
+$lat   = $params->get('lat');
+$lng   = $params->get('lng');
+$zoom  = $params->get('zoom');
 $token = $params->get('access_token');
 
 
