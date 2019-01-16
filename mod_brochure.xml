@@ -19,17 +19,16 @@
         <server type="extension" name="mod_brochure Update Site">https://raw.githubusercontent.com/NPEU/mod_brochure/master/update-manifest.xml</server>
     </updateservers>
 
-
     <files>
         <filename module="mod_brochure">mod_brochure.php</filename>
-        <filename>index.html</filename>
         <filename>helper.php</filename>
+        <filename>index.html</filename>
+        <filename>update-manifest.xml</filename>
         <folder>assets</folder>
         <folder>language</folder>
         <folder>tmpl</folder>
         <folder>vendor</folder>
     </files>
-
 
     <config>
         <fields name="params">
