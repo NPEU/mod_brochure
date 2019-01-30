@@ -159,7 +159,7 @@ class ModBrochureHelper
         $str_filter = new Twig_SimpleFilter('str_replace', function ($string, $search = '', $replace = '') {
             $new_string = '';
  
-            $new_string = str_replace( $search, $replace, $string);
+            $new_string = str_replace($search, $replace, $string);
             
             return $new_string;
         });
