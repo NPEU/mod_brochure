@@ -14,6 +14,14 @@ $data_tpl        = $params->get('data_tpl');
 $data_src_err    = $params->get('data_src_err');
 $data_decode_err = $params->get('data_decode_err');
 
+// Allow for relative data src URLs:
+if (strpos($data_src, 'http') !== 0) {
+    $s        = empty($_SERVER['SERVER_PORT']) ? '' : ($_SERVER['SERVER_PORT'] == '443') ? 's' : '';
+    $protocol = preg_replace('#/.*#',  $s, strtolower($_SERVER['SERVER_PROTOCOL']));
+    $domain   = $protocol.'://'.$_SERVER['SERVER_NAME'];
+    $data_src = $domain . '/' . trim($data_src, '/');
+}
+
 if (!$data = file_get_contents($data_src)) {
     $output = $data_src_err;
 } else {
