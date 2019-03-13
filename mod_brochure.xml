@@ -62,6 +62,19 @@
                     <option value="map">MOD_BROCHURE_PANE_MAP_RADIO_LABEL</option>
                     <option value="data">MOD_BROCHURE_PANE_DATA_RADIO_LABEL</option>
                 </field>
+                <field
+                    name="panebalance"
+                    type="radio"
+                    label="MOD_BROCHURE_PANE_BALANCE_LABEL"
+                    description="MOD_BROCHURE_PANE_BALANCE_DESC"
+                    default=""
+                    class="btn-group"
+                    required="true"
+                >
+                    <option value="33--66">MOD_BROCHURE_PANE_BALANCE_33_66_LABEL</option>
+                    <option value="50--50">MOD_BROCHURE_PANE_BALANCE_50_50_LABEL</option>
+                    <option value="66--33">MOD_BROCHURE_PANE_BALANCE_66_33_LABEL</option>
+                </field>
             </fieldset>
             <fieldset name="advanced">
                 <field
