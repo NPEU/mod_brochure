@@ -80,8 +80,8 @@
                 <field
 					name="load_assets"
 					type="radio"
-					label="MOD_BROCHURE_ADV_PANE_ASSETS_LABEL"
-					description="MOD_BROCHURE_ADV_PANE_ASSETS_DESC"
+					label="MOD_BROCHURE_ADV_ASSETS_LABEL"
+					description="MOD_BROCHURE_ADV_ASSETS_DESC"
 					class="btn-group btn-group-yesno"
 					default="1"
 					filter="integer"
