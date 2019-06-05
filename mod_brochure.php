@@ -20,6 +20,6 @@ $load_assets         = $params->get('load_assets');
 $single_pane_type    = ($left_pane_type == $right_pane_type) ? $left_pane_type : false;
 
 
-$moduleclass_sfx = htmlspecialchars($params->get('moduleclass_sfx'), ENT_COMPAT, 'UTF-8');
+#$moduleclass_sfx = htmlspecialchars($params->get('moduleclass_sfx'), ENT_COMPAT, 'UTF-8');
 
 require JModuleHelper::getLayoutPath('mod_brochure', $params->get('layout', 'default'));
